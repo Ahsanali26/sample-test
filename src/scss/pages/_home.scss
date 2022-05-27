@@ -1,0 +1,58 @@
+.home-container {
+  @include justify-center;
+  height: 100vh;
+
+  .home-content {
+    @include container-width;
+
+    h4 {
+      @include welcome-text;
+    }
+
+    .cards-container {
+      @include justify-center;
+      @include flex-wrap;
+
+      .cards {
+        @include cards;
+        box-shadow: $shadow;
+        margin: 20px;
+        border-radius: 6px;
+
+        .single-card {
+          padding: 20px 20px;
+
+          .card-header {
+            @include justify-between;
+            padding-bottom: 10px;
+
+            .company {
+              @include company-name;
+            }
+
+            .eye {
+              cursor: pointer;
+              width: 22px;
+            }
+          }
+
+          .image {
+            @include justify-center;
+
+            .company-logo {
+              @include logo-image;
+            }
+          }
+
+          .company-data {
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            color: #92929e;
+          }
+        }
+      }
+    }
+  }
+}
