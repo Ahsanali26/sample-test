@@ -1,0 +1,79 @@
+.profile-page {
+  width: 100%;
+  font-family: $text-font;
+
+  .table-container {
+    @include flex-col;
+    @include justify-center;
+    @include items-center;
+    width: 100%;
+    padding: 40px 10px;
+    margin: auto;
+  }
+
+  .table-heading {
+    @include company-name;
+    padding-bottom: 18px;
+    word-break: break-all;
+  }
+
+  .rtable {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    max-height: 300px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  .rtable th {
+    font-size: 11px;
+    text-align: left;
+    text-transform: uppercase;
+    background: #f2f0e6;
+  }
+
+  .rtable th,
+  .rtable td {
+    padding: 10px 18px;
+    border: 1px solid #d9d7ce;
+  }
+
+  .rtable--flip {
+    display: flex;
+    overflow: hidden;
+    background: none;
+  }
+
+  .rtable--flip thead {
+    display: flex;
+    flex-shrink: 0;
+    min-width: min-content;
+  }
+
+  .rtable--flip tbody {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .rtable--flip tr {
+    display: flex;
+    flex-direction: column;
+    min-width: min-content;
+    flex-shrink: 0;
+  }
+
+  .rtable--flip td,
+  .rtable--flip th {
+    display: block;
+  }
+
+  .rtable--flip td {
+    background-image: none !important;
+    border-left: 0;
+  }
+}
